@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 8px 0;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: 1px solid #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+button:hover {
+  background: #ffffff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  transform: scale(1.05);
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 14px;
+}

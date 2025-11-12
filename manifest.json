@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ECW Data Extractor",
+  "version": "1.0",
+  "description": "Extract Payment ID and Patient Count from ECW using Check Number",
+  "permissions": ["scripting", "activeTab", "downloads"],
+  "host_permissions": [
+    "https://txhepmapp.ecwcloud.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://txhepmapp.ecwcloud.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
