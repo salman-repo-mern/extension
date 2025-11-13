@@ -4,6 +4,7 @@ document.getElementById("extractBtn").addEventListener("click", async () => {
 
     if (!checkNumber) {
         message.textContent = "⚠️ Enter a check number first.";
+        message.style.color = 'red'
         return;
     }
 
@@ -17,8 +18,10 @@ document.getElementById("extractBtn").addEventListener("click", async () => {
     chrome.tabs.sendMessage(tab.id, { action: "extract", checkNumber }, (response) => {
         if (response?.status === "success") {
             message.textContent = "✅ Data exported successfully!";
+            message.style.color = 'green'
         } else {
             message.textContent = "❌ No data found or extraction failed.";
+            message.style.color = 'red'
         }
     });
 });
